@@ -3,6 +3,6 @@
 <br>
 <br>
 <h2>Project 1 :- <h2/>
-<b>Simple MNIST Neural Network from scratch</b>
-<p>In this notebook, I implemented a simple two-layer neural network and trained it on the MNIST digit recognizer dataset. It's meant to be an instructional example, through which you can understand the underlying math of neural networks better.</p>
+<p><b>Simple MNIST Neural Network from scratch</b><br>
+In this notebook, I implemented a simple two-layer neural network and trained it on the MNIST digit recognizer dataset. It's meant to be an instructional example, through which you can understand the underlying math of neural networks better.</p>
 
