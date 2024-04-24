@@ -28,5 +28,3 @@
                 taking various parameters.</i><br></li>
         </ul>
 </body>
-
-</html>
