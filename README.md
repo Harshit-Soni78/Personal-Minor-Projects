@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>readme.md</title>
-    <link rel="stylesheet" href="style.css">
-</head>
 
 <body>
     <h1><b>Personal-Minor-Projects</b></h1>
     <b><i>This Repo. contains my Personal Minor Projects that I make just for learning purpose.</i></b>
     <br>
-    <div class="Project Project_1">
         <h2>Project 1 :- </h2>
         <h3>MNIST Number Recognition</h3>
         <p><b>Simple MNIST Neural Network from scratch</b><br>
@@ -20,9 +11,7 @@
             recognizer
             dataset. It's meant to be an instructional example, through which you can understand the underlying math of
             neural networks better.</p><br>
-    </div>
-    <div class="Project Project_2">
-        <h2>Project 2 :- </h2>
+    <h2>Project 2 :- </h2>
         <h3>Logistic Regression</h3>
         <p><b>These are some practice Logistic Regression models :-</b><br>
         <ul>
@@ -38,9 +27,6 @@
             <li><b><i>HR_Dataset.ipynb :- </i></b>This model predicts whether a person would leave the company or not by
                 taking various parameters.</i><br></li>
         </ul>
-
-        </p>
-    </div>
 </body>
 
 </html>
