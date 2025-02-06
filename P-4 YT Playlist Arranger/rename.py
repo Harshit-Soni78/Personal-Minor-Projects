@@ -42,7 +42,7 @@ class FileManager:
                 matching_file = self.find_matching_file(title)
                 if matching_file:
                     original_filename = os.path.join(self.old_directory, matching_file)
-                    new_filename = os.path.join(self.new_directory, f"{serial_number}_{matching_file}")
+                    new_filename = os.path.join(self.new_directory, f"{serial_number} {matching_file}")
                     self.create_directory(self.new_directory)
                     self.rename_file(original_filename, new_filename)
                     self.move_file(new_filename, os.path.join(self.new_directory, os.path.basename(new_filename)))
@@ -50,9 +50,9 @@ class FileManager:
                     print(f"File not found for title: {title}")
 
 if __name__ == "__main__":
-    old_directory = 'videos'  # Path to the directory containing the video files
+    old_directory = 'Videos'  # Path to the directory containing the video files
     new_directory = 'Friendly'  # Path to the new directory
-    csv_file = 'video_titles_PCE.csv'  # Path to the CSV file
+    csv_file = 'video_titles.csv'  # Path to the CSV file
     
     file_manager = FileManager(old_directory, new_directory)
     file_manager.process_csv(csv_file)
