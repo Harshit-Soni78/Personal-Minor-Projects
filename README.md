@@ -58,3 +58,24 @@ It is a kind of headache in my mind to rename all the videos according to their 
 - Use `findTitle.py` first to make the csv then `rename.py` to rename and move the videos accordingly.
 
 ---
+
+## Project 5
+
+### QR Code Generator
+
+This is a simple **QR Code Generator** built using HTML, CSS, and JavaScript. It allows users to generate QR codes from URLs and download them as PNG images with customizable sizes.
+
+#### Features
+
+- Generate QR codes for any URL
+- Download QR codes as PNG images
+- Customize the QR code pixel size before downloading
+- Centered QR code with a white border for better readability
+- No backend required – runs entirely in the browser
+
+**_Live Demo_**
+
+[Live Demo :](https://harshit-soni78.github.io/QR-Code-Generator/)
+<https://harshit-soni78.github.io/QR-Code-Generator/>
+
+---
