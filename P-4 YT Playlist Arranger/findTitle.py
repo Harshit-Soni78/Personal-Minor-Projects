@@ -39,7 +39,7 @@ class CSVWriter:
         self.file_path = file_path
 
     def sanitize_title(self, title):
-        return title.replace('|', '_').replace(',', '_').replace('&', '_').replace(':', '_').replace('?','_').replace('"','_').replace('🔥','--').replace('#','_')
+        return title.replace('|', '_').replace(',', '_').replace('+', ' ').replace('/', '_').replace('  ', '   ').replace('!',"_").replace('&', '_').replace(':', '_').replace('?','_').replace('"','_').replace('🔥','--').replace('#','_')
 
     def write_to_csv(self, video_titles):
         with open(self.file_path, mode='w', newline='', encoding='utf-8') as file:
