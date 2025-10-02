@@ -55,3 +55,40 @@ Current Device: 0
 ```
 
 ---
+
+## 4. Simple Training Test (GPU Check)
+
+```python
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+# Select device
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print("Using:", device)
+
+# Dummy data
+x = torch.randn(500, 10).to(device)
+y = torch.randn(500, 1).to(device)
+
+# Model
+model = nn.Sequential(
+    nn.Linear(10, 64),
+    nn.ReLU(),
+    nn.Linear(64, 1)
+).to(device)
+
+criterion = nn.MSELoss()
+optimizer = optim.Adam(model.parameters(), lr=0.01)
+
+# Training loop
+for epoch in range(5):
+    optimizer.zero_grad()
+    outputs = model(x)
+    loss = criterion(outputs, y)
+    loss.backward()
+    optimizer.step()
+    print(f"Epoch {epoch+1}/5, Loss: {loss.item():.4f}")
+```
+
+---
