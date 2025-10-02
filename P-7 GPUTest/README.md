@@ -31,3 +31,27 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 ```
 
 ---
+
+## 3. Verify GPU in PyTorch
+
+Run the following script:
+
+```python
+import torch
+
+print("CUDA Available:", torch.cuda.is_available())
+print("GPU Name:", torch.cuda.get_device_name(0) if torch.cuda.is_available() else "No GPU")
+print("PyTorch CUDA Version:", torch.version.cuda)
+print("Current Device:", torch.cuda.current_device())
+```
+
+Expected output:
+
+```cmd
+CUDA Available: True
+GPU Name: NVIDIA GeForce GTX 1650
+PyTorch CUDA Version: 12.1
+Current Device: 0
+```
+
+---
