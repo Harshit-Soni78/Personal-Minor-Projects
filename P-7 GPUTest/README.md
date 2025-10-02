@@ -21,3 +21,13 @@ Driver Version: 529.04       CUDA Version: 12.0
 This confirms the system supports **CUDA 12.0**.
 
 ---
+
+## 2. Install PyTorch with CUDA Support
+
+Install PyTorch (with CUDA 12.1 support, compatible with CUDA 12.0 drivers):
+
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+```
+
+---
