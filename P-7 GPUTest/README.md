@@ -92,3 +92,52 @@ for epoch in range(5):
 ```
 
 ---
+
+## 5. GPU Stress Test (for Visual Confirmation)
+
+Run this to see GPU usage spike in `nvidia-smi`.
+
+```python
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+# Device
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print("Using:", device)
+
+# Big dummy dataset
+x = torch.randn(20000, 1024).to(device)
+y = torch.randn(20000, 10).to(device)
+
+# Larger model
+model = nn.Sequential(
+    nn.Linear(1024, 2048),
+    nn.ReLU(),
+    nn.Linear(2048, 1024),
+    nn.ReLU(),
+    nn.Linear(1024, 10)
+).to(device)
+
+criterion = nn.MSELoss()
+optimizer = optim.Adam(model.parameters(), lr=0.001)
+
+print("\n🚀 Starting GPU stress test... (watch nvidia-smi)")
+for epoch in range(20):
+    optimizer.zero_grad()
+    outputs = model(x)
+    loss = criterion(outputs, y)
+    loss.backward()
+    optimizer.step()
+    print(f"Epoch {epoch+1}/20 - Loss: {loss.item():.4f}")
+```
+
+In another terminal, run:
+
+```bash
+nvidia-smi -l 1
+```
+
+You should see GPU utilization and memory usage increase.
+
+---
