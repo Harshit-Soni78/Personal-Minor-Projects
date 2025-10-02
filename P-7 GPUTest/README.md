@@ -173,3 +173,12 @@ cuda.close()
    ```
 
 ---
+
+## 7. Quick Reset
+
+- Restart Python interpreter or Jupyter kernel → clears GPU memory.
+- Restart system → guarantees a clean GPU state.
+
+---
+
+✅ You are now ready to use your **GTX 1650 GPU** for training and testing ML models!
