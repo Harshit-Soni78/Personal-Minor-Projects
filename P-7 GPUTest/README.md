@@ -141,3 +141,35 @@ nvidia-smi -l 1
 You should see GPU utilization and memory usage increase.
 
 ---
+
+## 6. Clearing GPU Memory
+
+### PyTorch
+
+```python
+import torch
+torch.cuda.empty_cache()   # Frees unused GPU memory
+```
+
+### TensorFlow
+
+```python
+import tensorflow as tf
+from numba import cuda
+
+tf.keras.backend.clear_session()
+cuda.select_device(0)
+cuda.close()
+```
+
+### Kill Processes via Command Prompt
+
+1. Run `nvidia-smi` to list processes.
+2. Find the **PID** of the process using GPU memory.
+3. Kill it:
+
+   ```bash
+   taskkill /PID <PID_NUMBER> /F
+   ```
+
+---
